@@ -73,6 +73,12 @@ docker-compose up -d
 screen -S <screen-name>
 ```
 
+- If you want to copy the environment file from the local machine to the EC2 instance, use the following command.
+
+```bash
+rsync -avz -e "ssh -i <key-file>" <local-path> ubuntu@<public-ip>:<remote-path>
+```
+
 - Run the following command to start the application.
 
   - ### Python application
